@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Courgette&family=Kavivanar&family=Satisfy&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./bootstrap/bootstrap.min.css">
+<link rel="stylesheet" href="./style/style.css">
+<title>Hey Vino</title>
+</head>
+<body>
+<div class="container adventure col-md-8">
+<h3 class="qheading" id="qheading">Question 1:</h3>
+<div class="text-center">
+<img src="./images/spider.gif" alt="" srcset="" class="img" id="img1">
+</div>
+<h4 class="question" id="question">எட்டுக்கால் பூச்சிக்கு எத்தனை கால்?</h4><br>
+<h4 class="options" id="options">
+<select class="form-select" aria-label="Default select example" id="ad1">
+<option> Select Your Answer</option>
+<option value="5">5 கால்</option>
+<option value="7.5">7 1/2 கால்</option>
+<option value="8">8 கால்</option>
+<option value="1">1 கால்</option>
+</select>
+</h4>
+<br>
+<button class="btn btn-success" id="check1">Check the Answer &#127942;</button>
+<br>
+<div class="text-center">
+<h3 class="heading" id="lead" style="display:none ;">Congrats Vino 	&#127941; &#127942;! wait for the next Question!
+<a href="./ad2.html"><button class="btn btn-success">Next Question</button></a>
+</h3> 
+<h3 class="heading" id="failed" style="display:none ;">Ennadhu idhu! wait pannu adutha  Message Varum! <a href="./ad1.html"><button class="btn btn-primary">Replay</button></a> </h3>
+</div>
+</div>
+
+<script src="./bootstrap/bootstrap.min.js"></script>    
+<script>
+    /* question1 */
+document.getElementById("check1").onclick = function()
+{
+var ans1 = document.getElementById("ad1").value;
+if( ans1 == 8)
+{
+    document.getElementById("img1").src = "./images/love-heart.gif";
+    document.getElementById("qheading").style.display = "none";
+    document.getElementById("question").style.display = "none";
+    document.getElementById("options").style.display = "none";
+    document.getElementById("check1").style.display = "none";
+    document.getElementById("lead").style.display = "block";
+}
+else
+{
+    document.getElementById("img1").src = "./images/jerry_no.gif";
+    document.getElementById("qheading").style.display = "none";
+    document.getElementById("question").style.display = "none";
+    document.getElementById("options").style.display = "none";
+    document.getElementById("check1").style.display = "none";
+    document.getElementById("failed").style.display = "block";
+}
+}   
+</script>
+</body>
+</html>

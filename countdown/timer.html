@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hey Vinodhini</title>
+<link rel="stylesheet" href="./bootstrap/bootstrap.min.css">
+<style>
+@font-face {font-family: clock;src: url(./fonts/14\ Segment\ LED\ Regular.ttf);}
+@font-face {font-family:tripledot; src: url(./fonts/triple_dot_digital-7.ttf);}
+@font-face {font-family:timebomb; src: url(./fonts/TickingTimebombBB.ttf);}
+@font-face {font-family:equallizer;src: url(./fonts/395\ equalizer\ 2.ttf);}
+@font-face {font-family:robotus; src: url(./fonts/JMH\ Robotus.ttf);}
+@font-face {font-family:neon; src: url(./fonts/neon_pixel-7.ttf);}
+*
+{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+body{
+background-image: linear-gradient(to right, #303030, #2e2e2f, #2d2c2d, #2b2b2c, #29292b, #28292b, #28282a, #27282a, #27292a, #27292a, #272a2a, #282a2a);
+color: white;
+min-height: 100vh;
+display: flex;
+flex-direction: column;
+}
+#time{
+font-family: clock;
+width: fit-content;
+height: fit-content;
+margin: auto;
+color: rgb(233, 35, 35);
+font-size: 5rem;
+border: black 2px solid;
+}
+#flash
+{
+    background-color: red;
+    color: yellow;
+    font-family: tripledot;
+    padding: 1rem;
+    margin: 0;
+}
+.text
+{
+    margin: auto;
+    text-align: center;
+    color: red;
+    font-weight: bolder;
+    font-size: 220%;
+}
+</style>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<div class="container-fluid">
+<a class="navbar-brand" href="#" style="font-family: neon; font-size: 150%;">Vinodhini 👸</a>
+</div>
+</nav>
+<br>
+<div class="container-fluid m-0">
+    <marquee id="flash" behavior="" direction="">Hey Vino ma! Advance Happy birthday wishes...</marquee>
+</div>
+<br>
+
+<div class="container col-md-10">
+    <p style="font-family:timebomb;" class="text"> Vino's Birthday Countdown!</p>
+    <br>
+<div class="text-center">
+
+<p id="time"></p><br>
+<img src="./images/bday.gif" alt="" srcset="">
+</div>
+</div>
+<script src="./bootstrap/bootstrap.min.js"></script>
+<script>
+// Set the date we're counting down to
+var countDownDate = new Date("Aug 26, 2023 15:00:00").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+// Get today's date and time
+var now = new Date().getTime();
+
+// Find the distance between now and the count down date
+var distance = countDownDate - now;
+
+// Time calculations for days, hours, minutes and seconds
+var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+// Output the result in an element with id="demo"
+document.getElementById("time").innerHTML = "Days="+ days + "\n" + hours + ":"
++ minutes + ":" + seconds;
+
+// If the count down is over, write some text 
+if (distance < 0) {
+clearInterval(x);
+document.getElementById("time").innerHTML = "HEY ITS UR BIRTHDAY";
+}
+}, 1000);
+</script>
+
+</body>
+</html>

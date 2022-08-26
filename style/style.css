@@ -1,0 +1,67 @@
+/* font-family: 'Courgette', cursive;
+font-family: 'Kavivanar', cursive;
+font-family: 'Satisfy', cursive; */
+*
+{
+    font-family: monospace;
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+body
+{
+    padding: 1rem;
+    min-height: 100vh;
+
+}
+.heading
+{
+    font-family: 'Courgette', cursive;
+}
+.qheading
+{
+    font-family: 'Courgette', cursive;
+    line-height: 3rem;
+}
+.question
+{
+    font-family: 'Kavivanar', cursive;
+    font-size: 170%;
+    font-weight: bold;
+}
+.img
+{
+    align-items: center;
+    height: 300px;
+    width: 300px;
+    
+}
+.options
+{
+    font-family: 'Kavivanar', cursive;
+    font-size: 150%;
+    font-weight: bold;
+    line-height: 2rem;   
+}
+
+.adventure
+{
+justify-content: center;
+align-content: center;
+align-items: center;
+align-self: center;
+
+}
+.para
+{
+    font-size: larger;
+    font-family: 'Courgette', cursive;
+    text-align: justify;
+    font-weight: bold;
+}
+
+#kaattupoochi
+{
+    width: 350px;
+    height: 350px;
+}
